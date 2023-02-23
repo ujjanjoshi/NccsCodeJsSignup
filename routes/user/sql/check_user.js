@@ -5,7 +5,9 @@
         const output=await helper.mysqlHelper.query("Select password from users where username='"+username+"'");
         console.log (output[0]);
         let pass=output[0][0].password;
-        if(pass==password){
+        const val=helper.hashHelper.comparePassword(password,pass);
+    //  console.log(val);
+        if(val){
             return "login sucessful";
         }
         else{

@@ -6,7 +6,7 @@
         const username = req.body.username;
         const password = req.body.password;
      
-        let output = await helper.validationHelper.uservalidation(username,phone,email,password)
+        // let output = await helper.validationHelper.uservalidation(username,password)
             const output2=await check_user(username,password)
             res.send(output2);
     }
