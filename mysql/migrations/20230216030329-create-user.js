@@ -9,22 +9,39 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
+      username: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      lastName: {
+      password: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
+      },
+      phone:{
+        type: Sequelize.STRING
+      },
+      adress:{
+        type: Sequelize.STRING
+      },
+      usertypeid:{
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      status:{
+        allowNull: false,
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.BIGINT
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.BIGINT
       }
     });
   },

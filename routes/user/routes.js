@@ -4,5 +4,9 @@
     const userController = require("./methods/index")
     
     router.post('/sign-up',userController.userSignup);
+    router.post('/search',userController.userSearch);  
+    router.post('/login',userController.userlogin);  
+    router.post('/update',userController.user_update);  
+
     module.exports = router;
 })()
